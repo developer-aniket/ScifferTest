@@ -1,8 +1,6 @@
 package com.sciffer.aniket.anikettestsciffer.ui.answer;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,8 +16,6 @@ import com.sciffer.aniket.anikettestsciffer.ui.OnClickListenerRecyclerView;
 import com.sciffer.aniket.anikettestsciffer.ui.main.AnswersAdapter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class AnswersActivity extends AppCompatActivity implements OnClickListenerRecyclerView {
     private static final String TAG = AnswersActivity.class.getSimpleName();

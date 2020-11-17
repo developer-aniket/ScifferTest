@@ -14,12 +14,46 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        keypath {
+            keyAlias 'keysciffertest'
+            keyPassword 'sciffer@123'
+            storeFile file('E:/Work/Test/ScifferTest/keys/sciffertest.jks')
+            storePassword 'sciffer@123'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "server"
+    productFlavors {
+        dev {
+            dimension "server"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "Aniket Test Sciffer Dev"
+        }
+        qa {
+            dimension "server"
+            applicationIdSuffix ".qa"
+            resValue "string", "app_name", "Aniket Test Sciffer QA"
+            matchingFallbacks = ['dev']
+        }
+        staging {
+            dimension "server"
+            applicationIdSuffix ".staging"
+            resValue "string", "app_name", "Aniket Test Sciffer Staging"
+        }
+        production {
+            dimension "server"
+            resValue "string", "app_name", "Aniket Test Sciffer"
+        }
+    }
+
     lintOptions {
         checkReleaseBuilds false
         abortOnError false

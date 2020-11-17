@@ -262,9 +262,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListenerRe
             if (remainingQuestions > 0) {
                 Toast.makeText(this, "Please answer all the mandatory questions marked with *", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, selectedItems.toString(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, enteredText.toString(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, selectedImages.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Answers submitted successfully", Toast.LENGTH_SHORT).show();
 
                 startActivity(new Intent(this, AnswersActivity.class).putExtra("AnswerModelList", answerModelArrayList));
             }

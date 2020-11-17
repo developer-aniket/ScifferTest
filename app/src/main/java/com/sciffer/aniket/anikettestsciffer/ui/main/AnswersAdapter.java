@@ -10,12 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.sciffer.aniket.anikettestsciffer.R;
 import com.sciffer.aniket.anikettestsciffer.data.model.AnswerModel;
-import com.sciffer.aniket.anikettestsciffer.data.model.QuestionResponse;
-import com.sciffer.aniket.anikettestsciffer.data.model.ResponseModel;
 import com.sciffer.aniket.anikettestsciffer.ui.OnClickListenerRecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.AnswersViewHolder> implements OnClickListenerRecyclerView {
     private static final String TAG = AnswersAdapter.class.getSimpleName();
